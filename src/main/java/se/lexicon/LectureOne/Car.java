@@ -12,6 +12,7 @@ public class Car {
     private int year;
     private String color;
     private int mileage;
+    private Person owner;
 
     public Car(String brand, String model, int year, String color, int mileage) {
         this.vin = UUID.randomUUID().toString();
@@ -24,7 +25,7 @@ public class Car {
 
     //this(brand, model, year, color, mileage) calls the constructor above that has those parameters.
     public Car(String brand, String model, int year) {
-        this(brand, model, year, "", 0);
+        this(brand, model, year, "", 1);
     }
 
     //this(brand, model, year) calls the constructor above that has those parameters.
@@ -62,8 +63,12 @@ public class Car {
         return color;
     }
 
-    public int getMileage(){
+    public int getMileage() {
         return mileage;
+    }
+
+    public String getOwner() {
+        return owner.getPersonInfo();
     }
 
     public void setBrand(String brand) {
@@ -97,7 +102,10 @@ public class Car {
         } else {
             throw new IllegalArgumentException("Invalid miles");
         }
+    }
 
+    public void setOwner(Person owner) {
+        this.owner = owner;
     }
 
     public String getCarInfo() {
@@ -109,6 +117,11 @@ public class Car {
                 .append(", Color: ").append(color)
                 .append(", Year: ").append(year)
                 .append(", Mileage: ").append(mileage);
+        if (owner != null) {
+            sb.append(", Owner: "). append(owner.getPersonInfo());
+        } else {
+            sb.append(", No owner assigned.");
+        }
         return sb.toString();
     }
 }
