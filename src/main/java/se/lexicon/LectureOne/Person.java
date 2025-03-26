@@ -8,6 +8,8 @@ public class Person {
     private String email;
     private LocalDate birthDate;
 
+    // private Car[] carsOwned; // Bi-directional relationship
+
     public Person(String id, String name, String email, LocalDate birthDate) {
         this.id = id;
         this.name = name;

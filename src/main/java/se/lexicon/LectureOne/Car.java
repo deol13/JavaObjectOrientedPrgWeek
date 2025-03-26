@@ -12,7 +12,7 @@ public class Car {
     private int year;
     private String color;
     private int mileage;
-    private Person owner;
+    private Person owner; // directional relationship
 
     public Car(String brand, String model, int year, String color, int mileage) {
         this.vin = UUID.randomUUID().toString();
