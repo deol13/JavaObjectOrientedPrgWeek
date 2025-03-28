@@ -1,4 +1,4 @@
-package se.lexicon.LecturePractice;
+package se.lexicon.OOPPart1LecturePractices;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package se.lexicon.LecturePractice;
+package se.lexicon.OOPPart1LecturePractices;
 
 public class BankAccount {
     private static int counter;
